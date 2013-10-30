@@ -13,7 +13,7 @@ sudo apt-get install -y ansible git-core git
 
 pushd $HOME
 
-git clone git@github.com:tuhlmann/dev-ewu.git
+git clone https://github.com/tuhlmann/dev-ewu.git
 
 cd dev-ewu/ansible
 ansible-playbook -i hosts/local dev-ewu.yml
