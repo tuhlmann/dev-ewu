@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# check if ansible directory is already cloned and ansible-playbook is in path
+# else bootstrap
+
 # Install latest updates
 sudo apt-get update
 sudo apt-get upgrade -y
