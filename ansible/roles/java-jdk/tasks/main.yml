@@ -1,0 +1,7 @@
+---
+
+- name: Add Oracle Java repository
+  apt_repository: repo='ppa:webupd8team/java' state=present
+	
+- name: Install Oracle JDK
+  apt: pkg=oracle-java7-installer state=latest install_recommends=no update_cache=yes

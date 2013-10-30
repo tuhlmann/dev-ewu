@@ -1,0 +1,14 @@
+---
+# ansible
+
+- name: Install ansible dependencies
+  apt: pkg=$item state=installed
+  with_items:
+    #- python-software-properties
+    - python-apt
+
+- name: Add ansible repo
+  apt_repository: repo='ppa:rquillo/ansible' state=present
+
+- name: Install ansible
+  apt: pkg=ansible state=installed update_cache=yes

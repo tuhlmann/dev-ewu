@@ -1,0 +1,13 @@
+---
+# This role installs mongodb
+
+- name: Add an Apt signing key
+  apt_key: id=7F0CEB10 url=http://docs.mongodb.org/10gen-gpg-key.asc state=present
+
+- name: Add 10gen repo
+  apt_repository: repo='deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' state=present
+
+- name: Install mongodb
+  apt: pkg=mongodb-10gen state=installed update_cache=yes
+  notify: Restart mongodb
+

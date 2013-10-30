@@ -1,0 +1,38 @@
+---
+# common
+
+# - name: Update and upgrade APT
+#   apt: update_cache=yes upgrade=yes
+#   tags: common
+
+- name: Install basics
+  apt: pkg=$item update_cache=yes state=installed
+  tags: common
+  with_items:
+    - curl
+    - vim
+		- vim-gui-common
+    - htop
+    - python-pycurl
+    - language-pack-de
+		- ubuntu-restricted-extras 
+		- build-essential
+		- git-core 
+		- git 
+		- ack 
+		- ctags 
+		- ruby 
+		- rake 
+		- gnome-tweak-tool 
+		- unity-tweak-tool  
+		- gtk2-engines-pixbuf 
+		- libjpeg62 
+		- libwebkitgtk-1.0-0 
+		- alacarte 
+		- shutter 
+		- indicator-multiload 
+		- diodon 
+		- diodon-plugins 
+		- python-gpgme 
+		- synaptic 
+		- openssh-server

@@ -1,0 +1,11 @@
+---
+# This is the top-level playbook that defines our dev environment.
+
+- hosts: all
+  sudo: yes
+  user: tuhlmann
+  gather_facts: yes
+  roles:
+    - common
+    - java-jdk
+    - mongodb
