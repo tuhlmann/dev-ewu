@@ -20,7 +20,7 @@
     - git-core
     - git
     - ack
-    - ctags
+    - exuberant-ctags
     - ruby
     - rake
     - gnome-tweak-tool

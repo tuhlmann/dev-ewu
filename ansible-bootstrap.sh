@@ -19,7 +19,7 @@ pushd $HOME
 git clone https://github.com/tuhlmann/dev-ewu.git
 
 cd dev-ewu/ansible
-ansible-playbook -i hosts/local dev-ewu.yml
+ansible-playbook -i hosts/local dev-ewu.yml -K
 
 popd
 
