@@ -1,0 +1,9 @@
+---
+
+# Create ewu directory
+
+- shell: mkdir -p /ewu/sbt
+
+- shell: chown -R tuhlmann.tuhlmann /ewu
+
+- shell: curl -s https://raw.github.com/paulp/sbt-extras/master/sbt > /ewu/sbt/sbt && chmod 0755 /ewu/sbt/sbt

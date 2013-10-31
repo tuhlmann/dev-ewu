@@ -1,0 +1,28 @@
+---
+# Gui Common
+
+- name: Add GMate repository
+  apt_repository: repo='ppa:ubuntu-on-rails/ppa' state=present
+
+- name: Add Goobus repository
+  apt_repository: repo='ppa:gloobus-dev/gloobus-preview' state=present
+
+
+# - name: Update and upgrade APT
+#   apt: update_cache=yes upgrade=yes
+#   tags: gui-common
+
+- name: Install GUI Commons
+  apt: pkg=$item update_cache=yes state=latest
+  tags: gui-common
+  with_items:
+    - gedit-gmate
+    - gloobus-preview 
+    - gloobus-sushi
+    - unoconv
+        
+# Show Real name of user
+- shell: gsettings set com.canonical.indicator.session show-real-name-on-panel true
+
+# Get old scrollbars back
+- shell: gsettings set com.canonical.desktop.interface scrollbar-mode normal

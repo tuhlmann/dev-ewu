@@ -1,0 +1,13 @@
+---
+# This role installs Google Chrome
+
+- name: Add an Apt signing key
+  apt_key: url=https://dl-ssl.google.com/linux/linux_signing_key.pub state=present
+
+- name: Add Chrome repo
+  apt_repository: repo='deb http://dl.google.com/linux/chrome/deb/ stable main' state=present
+
+- name: Install Google Chrome
+  apt: pkg=google-chrome-stable state=installed update_cache=yes
+
+

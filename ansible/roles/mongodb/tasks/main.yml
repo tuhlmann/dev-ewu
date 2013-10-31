@@ -9,5 +9,4 @@
 
 - name: Install mongodb
   apt: pkg=mongodb-10gen state=installed update_cache=yes
-  notify: Restart mongodb
 

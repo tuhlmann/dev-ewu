@@ -3,9 +3,13 @@
 
 - hosts: all
   sudo: yes
+  sudo_user: root
   user: tuhlmann
-  gather_facts: yes
+  gather_facts: no
   roles:
     - common
     - java-jdk
     - mongodb
+    - chrome
+    - gui-common
+    - sbt
